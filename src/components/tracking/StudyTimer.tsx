@@ -4,7 +4,7 @@ import { Play, Square, Clock } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export function StudyTimer() {
-  const { isActive, formattedTime, start, stop } = useStudySession();
+  const { isActive, formattedTime, stop } = useStudySession();
 
   return (
     <AnimatePresence>

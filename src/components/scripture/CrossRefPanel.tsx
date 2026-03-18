@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Modal } from '../ui/Modal';
 import { useCrossReferences } from '../../hooks/useCrossReferences';
-import { useBibleText } from '../../hooks/useBibleText';
 import { parseVerseId, formatVerseRef } from '../../types/bible';
 import { useScriptureStore } from '../../stores/useScriptureStore';
 import { useAppStore } from '../../stores/useAppStore';

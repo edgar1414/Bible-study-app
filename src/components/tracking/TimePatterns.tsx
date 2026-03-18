@@ -59,7 +59,7 @@ export function TimePatterns() {
                   fontSize: '12px',
                   boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
                 }}
-                formatter={(value: number) => [`${value} min`, 'Study Time']}
+                formatter={(value) => [`${value} min`, 'Study Time']}
               />
               <Bar dataKey="minutes" fill="#007AFF" radius={[6, 6, 0, 0]} />
             </BarChart>

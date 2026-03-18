@@ -1,7 +1,6 @@
 import { useState, useCallback } from 'react';
 
 let crossRefCache: Record<string, string[]> | null = null;
-let loading = false;
 let loadPromise: Promise<void> | null = null;
 
 async function loadCrossRefs(): Promise<Record<string, string[]>> {
@@ -15,14 +14,11 @@ async function loadCrossRefs(): Promise<Record<string, string[]>> {
     .then(res => res.json())
     .then(data => {
       crossRefCache = data;
-      loading = false;
     })
     .catch(() => {
-      loading = false;
       crossRefCache = {};
     });
 
-  loading = true;
   await loadPromise;
   return crossRefCache!;
 }
